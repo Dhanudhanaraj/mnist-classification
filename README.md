@@ -1,4 +1,4 @@
-![Screenshot 2024-03-12 235857](https://github.com/Dhanudhanaraj/mnist-classification/assets/119218812/a114cd93-8185-4cb4-a011-4dfac02830c5)# Convolutional Deep Neural Network for Digit Classification
+# Convolutional Deep Neural Network for Digit Classification
 
 ## AIM
 To Develop a convolutional deep neural network for digit classification and to verify the response for scanned handwritten images.
