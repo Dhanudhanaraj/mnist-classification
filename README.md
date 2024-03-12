@@ -128,10 +128,10 @@ print(confusion_matrix(y_test,x_test_predictions))
 print(classification_report(y_test,x_test_predictions))
 
 # Prediction for a single input
-img = image.load_img('5.jpg')
+img = image.load_img('3.jpg')
 type(img)
 
-img = image.load_img('5.jpg')
+img = image.load_img('3.jpg')
 img_tensor = tf.convert_to_tensor(np.asarray(img))
 img_28 = tf.image.resize(img_tensor,(28,28))
 img_28_gray = tf.image.rgb_to_grayscale(img_28)
