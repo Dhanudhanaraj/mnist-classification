@@ -118,15 +118,19 @@ model.fit(X_train_scaled ,y_train_onehot, epochs=8,batch_size=128, validation_da
 metrics = pd.DataFrame(model.history.history)
 metrics.head()
 
+print("DHANUMALYA-212222230030")
 metrics[['accuracy','val_accuracy']].plot()
 
+print("DHANUMALYA-212222230030")
 metrics[['loss','val_loss']].plot()
 
 ## Test the model for your handwritten scanned images.
 x_test_predictions = np.argmax(model.predict(X_test_scaled), axis=1)
 
+print("DHANUMALYA-212222230030")
 print(confusion_matrix(y_test,x_test_predictions))
 
+print("DHANUMALYA-212222230030")
 print(classification_report(y_test,x_test_predictions))
 
 # Prediction for a single input
@@ -145,6 +149,7 @@ x_single_prediction = np.argmax(
 
 print(x_single_prediction)
 
+print("DHANUMALYA-212222230030")
 plt.imshow(img_28_gray_scaled.reshape(28,28),cmap='gray')
 
 img_28_gray_inverted = 255.0-img_28_gray
@@ -154,27 +159,26 @@ x_single_prediction = np.argmax(
     model.predict(img_28_gray_inverted_scaled.reshape(1,28,28,1)),
      axis=1)
 
+print("DHANUMALYA-212222230030")
 print(x_single_prediction)
 ```
 
 ## OUTPUT
 
 ### Training Loss, Validation Loss Vs Iteration Plot
-![Screenshot 2024-03-12 235857](https://github.com/Dhanudhanaraj/mnist-classification/assets/119218812/ee58f090-6d87-4e29-b319-81efb799331b)
 
-![Screenshot 2024-03-12 235918](https://github.com/Dhanudhanaraj/mnist-classification/assets/119218812/ef020a2b-795e-4904-ad85-d8888b96438f)
+
+
 
 
 ### Classification Report
-![Screenshot 2024-03-12 235943](https://github.com/Dhanudhanaraj/mnist-classification/assets/119218812/3ca6eb5c-60d6-4959-a7ba-87ae7a03e7a5)
+
 
 ### Confusion Matrix
-![Screenshot 2024-03-12 235951](https://github.com/Dhanudhanaraj/mnist-classification/assets/119218812/a5ac4931-fc42-4675-b971-7433c71ad466)
+
 
 ### New Sample Data Prediction
-![Screenshot 2024-03-13 000028](https://github.com/Dhanudhanaraj/mnist-classification/assets/119218812/b916d8e5-e895-4128-b4b2-585661adfbc9)
 
-![Screenshot 2024-03-13 000038](https://github.com/Dhanudhanaraj/mnist-classification/assets/119218812/799251f8-ad91-4ec0-b857-87c036e810ba)
 
 ## RESULT
 A convolutional deep neural network for digit classification and to verify the response for scanned handwritten images is developed sucessfully.
